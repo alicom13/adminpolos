@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Polos - Professional Admin Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/gh/alicom13/polos/css/polos-los.css" rel="stylesheet">
+    <link href="../aset/css/admin-polos.css" rel="stylesheet">
+</head>
+<body>
+    <div class="wrapper">
+        <!-- SIDEBAR -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <div class="logo">
+                    <i class="ti ti-brand-tabler logo-icon"></i>
+                    <span class="logo-text">Admin Polos</span>
+                </div>
+            </div>
+            
+            <div class="sidebar-menu">
+                <ul class="menu">
+                    <li class="menu-title">Main</li>
+                    <li><a href="#" class="active"><i class="ti ti-home"></i><span>Dashboard</span></a></li>
+                    
+                    <li class="menu-title">Management</li>
+                    <li class="has-sub">
+                        <a href="#"><i class="ti ti-folder"></i><span>Master Data</span><i class="ti ti-chevron-right arrow"></i></a>
+                        <ul class="submenu">
+                            <li><a href="#"><i class="ti ti-user"></i>Users</a></li>
+                            <li><a href="#"><i class="ti ti-package"></i>Products</a></li>
+                            <li class="has-sub">
+                                <a href="#"><i class="ti ti-category"></i>Categories<i class="ti ti-chevron-right arrow"></i></a>
+                                <ul class="submenu">
+                                    <li><a href="#"><i class="ti ti-category-2"></i>Category A</a></li>
+                                    <li><a href="#"><i class="ti ti-category-2"></i>Category B</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    
+                    <li><a href="#"><i class="ti ti-shopping-cart"></i><span>Orders</span></a></li>
+                    <li><a href="#"><i class="ti ti-users"></i><span>Customers</span></a></li>
+                    <li><a href="#"><i class="ti ti-chart-bar"></i><span>Analytics</span></a></li>
+                    
+                    <li class="menu-title">Support</li>
+                    <li class="has-sub">
+                        <a href="#"><i class="ti ti-headset"></i><span>Support</span><i class="ti ti-chevron-right arrow"></i></a>
+                        <ul class="submenu">
+                            <li><a href="#"><i class="ti ti-ticket"></i>By Ticket</a></li>
+                            <li><a href="#"><i class="ti ti-phone"></i>By Phone</a></li>
+                            <li class="has-sub">
+                                <a href="#"><i class="ti ti-message-2"></i>By Email<i class="ti ti-chevron-right arrow"></i></a>
+                                <ul class="submenu">
+                                    <li><a href="#"><i class="ti ti-mail"></i>General Inquiry</a></li>
+                                    <li><a href="#"><i class="ti ti-help"></i>Technical Support</a></li>
+                                    <li><a href="#"><i class="ti ti-credit-card"></i>Billing Support</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    
+                    <li class="menu-title">Settings</li>
+                    <li><a href="#"><i class="ti ti-settings"></i><span>Settings</span></a></li>
+                    <li><a href="#"><i class="ti ti-help"></i><span>Help</span></a></li>
+                </ul>
+            </div>
+        </aside>
+
+        <!-- OVERLAY MOBILE -->
+        <div class="overlay" id="overlay"></div>
+
+        <!-- MAIN CONTENT -->
+        <div class="main-content">
+            <!-- HEADER -->
+            <header class="header">
+                <div class="header-top">
+                    <div class="header-left">
+                        <button class="toggle-sidebar" id="sidebarToggle">
+                            <i class="ti ti-menu-2"></i>
+                        </button>
+                        <div class="layout-controls">
+                            <button class="layout-btn" data-layout="full" title="Full Sidebar">
+                                <i class="ti ti-layout-sidebar"></i>
+                            </button>
+                            <button class="layout-btn" data-layout="compact" title="Compact Sidebar">
+                                <i class="ti ti-layout-sidebar-right"></i>
+                            </button>
+                            <button class="layout-btn" data-layout="icons" title="Icons Only">
+                                <i class="ti ti-layout-navbar"></i>
+                            </button>
+                            <button class="layout-btn" data-layout="hidden" title="Hidden Sidebar">
+                                <i class="ti ti-layout-sidebar-right-collapse"></i>
+                            </button>
+                        </div>
+                        <div class="page-header">
+                            <h1 class="page-title">Dashboard</h1>
+                            <ul class="breadcrumb">
+                                <li><a href="#">Home</a></li>
+                                <li><a href="#">Admin</a></li>
+                                <li>Dashboard</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="header-right">
+                        <button class="header-icon">
+                            <i class="ti ti-bell"></i>
+                            <span class="badge">3</span>
+                        </button>
+                        <button class="header-icon">
+                            <i class="ti ti-message"></i>
+                            <span class="badge">5</span>
+                        </button>
+                        
+                        <div class="user-menu" id="userMenu">
+                            <div class="user-avatar">JD</div>
+                            <div class="user-info">
+                                <span class="user-name">John Doe</span>
+                                <span class="user-role">Administrator</span>
+                            </div>
+                            <i class="ti ti-chevron-down"></i>
+                            
+                            <div class="user-dropdown" id="userDropdown">
+                                <a href="#">
+                                    <i class="ti ti-user"></i>
+                                    <span>My Profile</span>
+                                </a>
+                                <a href="#">
+                                    <i class="ti ti-settings"></i>
+                                    <span>Account Settings</span>
+                                </a>
+                                <a href="#">
+                                    <i class="ti ti-bell"></i>
+                                    <span>Notifications</span>
+                                </a>
+                                <a href="#">
+                                    <i class="ti ti-logout"></i>
+                                    <span>Logout</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <!-- CONTENT -->
+            <section class="content">
+                <!-- Dashboard content sama seperti sebelumnya -->
+                <div class="lmn lmn-full">
+                    <div class="lmn-hd pt-between">
+                        <div>
+                            <h2 class="biru1">Dashboard Overview</h2>
+                            <p class="abu2">Welcome to Admin Polos! Your professional admin dashboard.</p>
+                        </div>
+                        <div class="pt-center">
+                            <button class="btn btn-outline" id="exportBtn">Export Report</button>
+                        </div>
+                    </div>
+                    
+                    <div class="lmn-bd">
+                        <!-- Stats Cards, Charts, Activities sama seperti sebelumnya -->
+                        <div class="pl-box pl-box-4">
+                            <div class="bx-itm bx-highlight js-interactive" data-stats="revenue">
+                                <div class="pt-between">
+                                    <div class="card-title abu2">Total Revenue</div>
+                                    <div class="card-icon bg-biru1">
+                                        <i class="ti ti-currency-dollar putih"></i>
+                                    </div>
+                                </div>
+                                <div class="card-value hitam">$24,580</div>
+                                <div class="card-change hijau1">
+                                    <i class="ti ti-trending-up"></i> 12.5% increase
+                                </div>
+                            </div>
+                            
+                            <div class="bx-itm bx-highlight js-interactive" data-stats="customers">
+                                <div class="pt-between">
+                                    <div class="card-title abu2">New Customers</div>
+                                    <div class="card-icon bg-hijau1">
+                                        <i class="ti ti-users putih"></i>
+                                    </div>
+                                </div>
+                                <div class="card-value hitam">1,248</div>
+                                <div class="card-change hijau1">
+                                    <i class="ti ti-trending-up"></i> 8.2% increase
+                                </div>
+                            </div>
+                            
+                            <div class="bx-itm bx-highlight js-interactive" data-stats="orders">
+                                <div class="pt-between">
+                                    <div class="card-title abu2">Orders</div>
+                                    <div class="card-icon bg-kuning1">
+                                        <i class="ti ti-shopping-cart putih"></i>
+                                    </div>
+                                </div>
+                                <div class="card-value hitam">356</div>
+                                <div class="card-change merah1">
+                                    <i class="ti ti-trending-down"></i> 3.1% decrease
+                                </div>
+                            </div>
+                            
+                            <div class="bx-itm bx-highlight js-interactive" data-stats="conversion">
+                                <div class="pt-between">
+                                    <div class="card-title abu2">Conversion Rate</div>
+                                    <div class="card-icon bg-ungu1">
+                                        <i class="ti ti-chart-pie putih"></i>
+                                    </div>
+                                </div>
+                                <div class="card-value hitam">24.7%</div>
+                                <div class="card-change hijau1">
+                                    <i class="ti ti-trending-up"></i> 5.3% increase
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Charts & Activities -->
+                        <div class="rw large-gap">
+                            <div class="cl-8 cs-12">
+                                <div class="lmn lmn-plain" id="chartContainer">
+                                    <div class="lmn-hd pt-between">
+                                        <div class="chart-title biru1">Revenue Statistics</div>
+                                        <div class="chart-actions">
+                                            <button class="btn btn-outline" data-period="day">Day</button>
+                                            <button class="btn btn-outline" data-period="week">Week</button>
+                                            <button class="btn btn-outline" data-period="month">Month</button>
+                                        </div>
+                                    </div>
+                                    <div class="lmn-bd">
+                                        <div class="chart-placeholder">
+                                            Revenue Chart Visualization
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="cl-4 cs-12">
+                                <div class="lmn lmn-plain">
+                                    <div class="lmn-hd pt-between">
+                                        <div class="activity-title biru1">Recent Activity</div>
+                                        <div class="activity-actions">
+                                            <button class="btn btn-outline" id="viewAllActivities">View All</button>
+                                        </div>
+                                    </div>
+                                    <div class="lmn-bd">
+                                        <ul class="activity-list">
+                                            <li class="activity-item">
+                                                <div class="activity-icon bg-biru1">
+                                                    <i class="ti ti-user-plus putih"></i>
+                                                </div>
+                                                <div class="activity-content">
+                                                    <div class="activity-title">New customer registered</div>
+                                                    <div class="activity-time abu2">5 minutes ago</div>
+                                                </div>
+                                            </li>
+                                            <li class="activity-item">
+                                                <div class="activity-icon bg-hijau1">
+                                                    <i class="ti ti-shopping-cart putih"></i>
+                                                </div>
+                                                <div class="activity-content">
+                                                    <div class="activity-title">New order #ORD-7821</div>
+                                                    <div class="activity-time abu2">12 minutes ago</div>
+                                                </div>
+                                            </li>
+                                            <li class="activity-item">
+                                                <div class="activity-icon bg-kuning1">
+                                                    <i class="ti ti-currency-dollar putih"></i>
+                                                </div>
+                                                <div class="activity-content">
+                                                    <div class="activity-title">Payment received for #ORD-7819</div>
+                                                    <div class="activity-time abu2">1 hour ago</div>
+                                                </div>
+                                            </li>
+                                            <li class="activity-item">
+                                                <div class="activity-icon bg-ungu1">
+                                                    <i class="ti ti-message putih"></i>
+                                                </div>
+                                                <div class="activity-content">
+                                                    <div class="activity-title">New message from customer</div>
+                                                    <div class="activity-time abu2">2 hours ago</div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/gh/alicom13/polos/js/polos-los.js"></script>
+    <script src="../aset/js/admin-polos.js"></script>
+</body>
+</html>
